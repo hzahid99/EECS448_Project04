@@ -1,0 +1,93 @@
+.box {
+    box-shadow: 0px 0px 40px 20px rgba(30, 25, 28, 0.25);
+    max-width: 395px;
+    margin: 5vh auto 5vh auto;
+
+}
+
+.buttons, .length {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#calDisplay {
+    /*The display box*/
+    text-align: right;
+    height: 100px;
+    line-height: 70px;
+    /* padding: 16px 8px; */
+    font-size: 25px;
+    border: 0.5px solid black;
+    position: relative;
+
+}
+
+#radgree {
+    display: flex;
+    position: absolute;
+    /* top: 0px;
+    left: 0px; */
+    height: 10px;
+    width: 15px;
+    /* overflow: auto; */
+
+}
+
+.button, .change, .unitC, .convert {
+    /*Properties for all the calculator keys: border, text size and allignment etc*/
+    border: 0.5px solid black;
+    line-height: 80px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* .change {
+    border: 0.5px solid black;
+    line-height: 80px;
+    text-align: center;
+    font-size: 22px;
+    cursor: pointer;
+} */
+
+.button:hover {
+    /*Properties when hovering over a key*/    
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.15s;
+}
+
+#operators {
+    /*Color of the tiles and the text for everything with operator id*/
+    background-color: #8D99AE;
+    color: black;
+
+}
+
+#parenthesis {
+    /*Color of the tiles and the text for everything with operator id*/
+    background-color: #8D99AE;
+    color: black;
+
+}
+
+#digits {
+    /*Color of the tiles with the digit id*/
+    background-color: #EDF2F4;
+}
+
+#equal {
+    /*Color of the tile and the text for =*/
+    background-color: #2B2D42;
+    color: white;
+}
+
+#misc {
+    /*Color of the tile and the text for C*/
+    background-color: #8D99AE;
+    color: #EF233C;
+}
+
+.show {
+    display: none;
+}

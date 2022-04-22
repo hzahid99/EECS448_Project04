@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 03</title>
+    <!--The tab title-->
+    <link rel="stylesheet" href="style.css">
+    <!--Linking to CSS file-->
+</head>
+
+<body>
+    <section class="box">    
+        <!--Make a class for the whole calculator box-->  
+        <button id = "home">Home</button>
+        <button id = "length">Length</button>   
+        <button id = "temp">Temp</button>  
+        <button>Speed</button> 
+        <button>Angle</button>     
+        <button>Base Convert</button>                              
+        <div id="calDisplay">
+            
+        </div>                                     <!--Div for just the the display with an id calDisplay-->
+        <div class="buttons">                                           <!--Make a class for all the keys and make divs w-->
+            <div class="button" id="misc">C</div>                       <!--Create all keys within the button class and seperate ids for operators digits = and C-->
+            <div class="button" id="parenthesis">(</div>
+            <div class="button" id="parenthesis">)</div>
+            <div class="button" id="operators">&#x2190</div>            <!--Hex for left arrow-->
+            <div class="button" id="extra">sin</div>
+            <div class="button" id="extra">cos</div>
+            <div class="button" id="extra">tan</div>
+            <div class="button" id="operators">*</div>
+            <div class="button" id="digits">7</div>
+            <div class="button" id="digits">8</div>
+            <div class="button" id="digits">9</div>
+            <div class="button" id="operators">-</div>
+            <div class="button" id="digits">4</div>
+            <div class="button" id="digits">5</div>
+            <div class="button" id="digits">6</div>
+            <div class="button" id="operators">+</div>
+            <div class="button" id="digits">1</div>
+            <div class="button" id="digits">2</div>
+            <div class="button" id="digits">3</div>
+            <div class="button" id="operators">/</div>
+            <div class="change" id="extra">Deg</div>
+            <div class="button" id="digits">0</div>
+            <div class="button" id="digits">.</div>
+            <div class="button" id="equal">=</div>
+        </div>
+
+        <div class = "length">
+            <div class="button" id="digits">7</div>
+            <div class="button" id="digits">8</div>
+            <div class="button" id="digits">9</div>
+            <div class="button" id="misc">C</div>  
+            <div class="button" id="digits">4</div>
+            <div class="button" id="digits">5</div>
+            <div class="button" id="digits">6</div>
+            <div class="button" id="operators">&#x2190</div> 
+            <div class="button" id="digits">1</div>
+            <div class="button" id="digits">2</div>
+            <div class="button" id="digits">3</div>
+            <div class="button" id="digits">.</div>
+            <div class="unitC" id="extra">C to I</div>
+            <div class="button" id="digits">0</div>
+            <div class="button" id="digits"></div>
+            <div class="convert" id="digits">=</div>
+        </div>
+
+
+
+    </section>
+
+    <script src="index.js"></script>
+    <script src="length.js"></script>
+    <script src = "temp.js"></script>
+    <!--Linking to the JS file-->
+</body>
+
+</html>
