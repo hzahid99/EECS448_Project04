@@ -50,7 +50,7 @@
     cursor: pointer;
 } */
 
-.button:hover {
+.button:hover, .convert:hover {
     /*Properties when hovering over a key*/    
     font-weight: bold;
     font-size: 25px;
