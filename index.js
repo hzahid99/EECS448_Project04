@@ -53,7 +53,7 @@ buttons.map(button => {
                 let angle = display.innerText.slice(4, count-1)  //removes sin/cos/tan and paranthesis
                 //get whether it is deg or rad
                 let unit = change.innerText
-                if (!display.innerText.includes("(", 3) || !display.innerText.includes(")", count-1))
+                if (!(display.innerText.includes('(', 3)) || !display.innerText.includes(')', count-1))
                 {
                     display.innerText = "Error"
                 }
@@ -102,12 +102,16 @@ buttons.map(button => {
                     }
                 }
             }
-            //If no trig func                  
-            try {                                                       //Try to the evaluate the operation between the strings eg 1+1
-                display.innerText = eval(display.innerText);
-            } catch {                                                   //If it can't evaluate, display "Error"
-                display.innerText = "Error"
-            }
+            //If no trig func  
+            else
+            {
+                try 
+                {                                                       //Try to the evaluate the operation between the strings eg 1+1
+                    display.innerText = eval(display.innerText);
+                } catch {                                                   //If it can't evaluate, display "Error"
+                    display.innerText = "Error"
+                }
+            }                
         }
 
         else {
