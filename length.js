@@ -60,17 +60,17 @@ changed.addEventListener("click", ()=> {
         }
     }
 
-    //Alternate bw Deg 2 Rad and Rad 2 Deg
-    else if(initial == "Deg 2 Rad" || initial == "Rad 2 Deg")
+    //Alternate bw Deg/Radand Rad/Deg
+    else if(initial == "Deg/Rad" || initial == "Rad/Deg")
     {
         basebut++
         if(basebut % 2 == 1)
         {
-            changed.innerText = "Deg 2 Rad"
+            changed.innerText = "Deg/Rad"
         }
         else
         {
-            changed.innerText = "Rad 2 Deg"
+            changed.innerText = "Rad/Deg"
         }
     }
 
@@ -143,10 +143,10 @@ convert.addEventListener("click", ()=> {
     }
 
     //If the button has angle text
-    else if(changed.innerText == "Deg 2 Rad " || changed.innerText == "Rad 2 Deg")
+    else if(changed.innerText == "Deg/Rad" || changed.innerText == "Rad/Deg")
     {
         //Calc for deg to rad
-        if(changed.innerText == "Deg 2 Rad") {
+        if(changed.innerText == "Deg/Rad") {
             let input = display.innerText
             let ans = input * (Math.PI/180)
             display.innerText = ans
