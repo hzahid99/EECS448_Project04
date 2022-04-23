@@ -10,6 +10,7 @@ changed.style.color = "red"
 let tempbut = 0
 let lengthbut = 0
 let speedbut = 0;
+let basebut = 0;
 
 changed.addEventListener("click", ()=> {
     let initial = changed.innerText
@@ -31,6 +32,18 @@ changed.addEventListener("click", ()=> {
         else
         {
             changed.innerText = "Mph/Kmh"
+        }
+    }
+    else if(initial == "Bin/Dec" || initial == "Dec/Bin")
+    {
+        basebut++
+        if(basebut % 2 == 1)
+        {
+            changed.innerText = "Bin/Dec"
+        }
+        else
+        {
+            changed.innerText = "Dec/Bin"
         }
     }
     else {
@@ -74,6 +87,18 @@ convert.addEventListener("click", ()=> {
         } else {
             let input = display.innerText
             let ans = input * 1.609344
+            display.innerText = ans
+        }
+    }
+    else if(changed.innerText == "Bin/Dec" || changed.innerText == "Dec/Bin")
+    {
+        if(changed.innerText == "Bin/Dec") {
+            let input = display.innerText
+            let ans = parseInt(input, 2)
+            display.innerText = ans
+        } else {
+            let input = display.innerText
+            let ans = input.toString(2)
             display.innerText = ans
         }
     }
