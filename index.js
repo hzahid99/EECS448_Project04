@@ -49,11 +49,16 @@ buttons.map(button => {
             //If user wants to use trig functions
             if(display.innerText.slice(0,3) == 'sin' || display.innerText.slice(0,3) == 'cos' || display.innerText.slice(0,3) == 'tan') {
                 //get the nunber after sin/cos/tan
-                let angle = display.innerText.slice(3)
+                let count = display.innerText.length
+                let angle = display.innerText.slice(4, count-1)  //removes sin/cos/tan and paranthesis
                 //get whether it is deg or rad
                 let unit = change.innerText
+                if (!display.innerText.includes("(", 3) || !display.innerText.includes(")", count-1))
+                {
+                    display.innerText = "Error"
+                }
                 //If the fun is sin
-                if(display.innerText.slice(0,3) == 'sin') {
+                else if(display.innerText.slice(0,3) == 'sin') {
                     //if the fun is in degree
                     if(unit == "Deg") 
                     {
