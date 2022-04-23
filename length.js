@@ -46,6 +46,18 @@ changed.addEventListener("click", ()=> {
             changed.innerText = "Dec/Bin"
         }
     }
+    else if(initial == "Deg 2 Rad" || initial == "Rad 2 Deg")
+    {
+        basebut++
+        if(basebut % 2 == 1)
+        {
+            changed.innerText = "Deg 2 Rad"
+        }
+        else
+        {
+            changed.innerText = "Rad 2 Deg"
+        }
+    }
     else {
 
         tempbut++
@@ -102,6 +114,20 @@ convert.addEventListener("click", ()=> {
             display.innerText = ans
         }
     }
+
+    else if(changed.innerText == "Deg 2 Rad" || changed.innerText == "Rad 2 Deg")
+    {
+        if(changed.innerText == "Deg 2 Rad") {
+            let input = display.innerText
+            let ans = input * (Math.PI/180)
+            display.innerText = ans
+        } else {
+            let input = display.innerText
+            let ans = input * (180/Math.PI)
+            display.innerText = ans
+        }
+    }
+
     else {
         if(changed.innerText == "Cm to In") {
             let input = display.innerText
