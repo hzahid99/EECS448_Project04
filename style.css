@@ -89,5 +89,6 @@
 }
 
 .show {
+    /*Hide all the buttons (used to prevent the home calc to lose structure)*/
     display: none;
 }

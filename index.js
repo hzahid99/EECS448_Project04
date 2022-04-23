@@ -7,8 +7,10 @@ let button = document.querySelector('.buttons')
 let change = document.querySelector('.change')
 change.style.color = "red"
 
+//Grab the home button
 let home = document.querySelector('#home')
 
+//If home is clicked invoke show which hides the buttons for other calc modes
 home.addEventListener("click", ()=> {
     lbutton.classList.add("show")
     button.style.display = ""
@@ -17,6 +19,7 @@ home.addEventListener("click", ()=> {
 let dneed = document.querySelector('.l')
 let degree = 0
 
+//If the Deg/Rad button is clicked, switch bw deg and rad with every click
 change.addEventListener("click", ()=> {
     degree++
     if(degree % 2 == 1) {
@@ -43,36 +46,52 @@ buttons.map(button => {
         }
 
         else if (event.target.innerText == '=') {    
+            //If user wants to use trig functions
             if(display.innerText.slice(0,3) == 'sin' || display.innerText.slice(0,3) == 'cos' || display.innerText.slice(0,3) == 'tan') {
+                //get the nunber after sin/cos/tan
                 let angle = display.innerText.slice(3)
+                //get whether it is deg or rad
                 let unit = change.innerText
+                //If the fun is sin
                 if(display.innerText.slice(0,3) == 'sin') {
+                    //if the fun is in degree
                     if(unit == "Deg") {
    
-                    } else {
+                    } 
+                    //If the func is in rad
+                    else {
                         let ans = Math.sin(angle)
                         display.innerText = ans
                     }
                 }
 
+                //If the func is cos
                 else if(display.innerText.slice(0,3) == 'cos') {
+                    //if the fun is in degree
                     if(unit == "Deg") {
    
-                    } else {
+                    }
+                    //If the func is in rad
+                    else {
                         let ans = Math.cos(angle)
                         display.innerText = ans
                     }
                 }
+
+                //If the func is tan
                 else if(display.innerText.slice(0,3) == 'tan') {
+                    //if the fun is in degree
                     if(unit == "Deg") {
    
-                    } else {
+                    } 
+                    //If the func is in rad
+                    else {
                         let ans = Math.tan(angle)
                         display.innerText = ans
                     }
                 }
             }
-                              
+            //If no trig func                  
             try {                                                       //Try to the evaluate the operation between the strings eg 1+1
                 display.innerText = eval(display.innerText);
             } catch {                                                   //If it can't evaluate, display "Error"
