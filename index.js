@@ -55,8 +55,10 @@ buttons.map(button => {
                 //If the fun is sin
                 if(display.innerText.slice(0,3) == 'sin') {
                     //if the fun is in degree
-                    if(unit == "Deg") {
-   
+                    if(unit == "Deg") 
+                    {
+                        let ans = Math.sin(deg2rad(angle));
+                        display.innerText = ((ans));
                     } 
                     //If the func is in rad
                     else {
@@ -68,8 +70,10 @@ buttons.map(button => {
                 //If the func is cos
                 else if(display.innerText.slice(0,3) == 'cos') {
                     //if the fun is in degree
-                    if(unit == "Deg") {
-   
+                    if(unit == "Deg") 
+                    {
+                        let ans = Math.cos(deg2rad(angle));
+                        display.innerText = ((ans));
                     }
                     //If the func is in rad
                     else {
@@ -81,8 +85,10 @@ buttons.map(button => {
                 //If the func is tan
                 else if(display.innerText.slice(0,3) == 'tan') {
                     //if the fun is in degree
-                    if(unit == "Deg") {
-   
+                    if(unit == "Deg") 
+                    {
+                        let ans = Math.tan(deg2rad(angle));
+                        display.innerText = ((ans));
                     } 
                     //If the func is in rad
                     else {
@@ -103,6 +109,10 @@ buttons.map(button => {
             display.innerText += event.target.innerText;                //For all the digits and operators, display will display the strings eg 2*6
         }                                                               //This is evaluated by =
 
+        function deg2rad(degrees)                                       //To convert angle in degrees to radians
+        {
+            return ( degrees * ((Math.PI) / 180));
+        }
     });
 });
 
