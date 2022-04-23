@@ -92,3 +92,9 @@
     /*Hide all the buttons (used to prevent the home calc to lose structure)*/
     display: none;
 }
+
+.change:hover, .unitC:hover{
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.15s;
+}
