@@ -135,4 +135,4 @@ buttons.map(button => {
     });
 });
 
-
+module.exports = deg2rad
