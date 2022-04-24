@@ -110,8 +110,6 @@ length.addEventListener("click", () => {
     
 })
 
-
-
 //When = to clicked evaluate 
 convert.addEventListener("click", ()=> {
     if(display.innerText.includes("π")){
@@ -126,12 +124,12 @@ convert.addEventListener("click", ()=> {
         //Calc for C to F
         if(changed.innerText == "C° to F°") {
             let input = display.innerText
-            let ans = (input*9/5)+32
+            let ans = C2F(input)
             display.innerText = ans
         } else                          //Calc for F to C
         {
             let input = display.innerText
-            let ans = ((input - 32)*5)/9
+            let ans = F2C(input)
             display.innerText = ans
         }
 
@@ -143,11 +141,11 @@ convert.addEventListener("click", ()=> {
         //Calc for kmh to mph 
         if(changed.innerText == "Kmh/Mph") {
             let input = display.innerText
-            let ans = input * 0.6213711922
+            let ans = K2M(input)
             display.innerText = ans
         } else {                        //Calc for mph to kmh
             let input = display.innerText
-            let ans = input * 1.609344
+            let ans = M2K(input)
             display.innerText = ans
         }
     }
@@ -197,5 +195,26 @@ convert.addEventListener("click", ()=> {
             display.innerText = ans
         }
     }
+
+    function C2F(temp)          //Convert Celcius to Fahrenheit
+    {
+        return (temp*9/5)+32
+    }
+    function F2C (temp)         //Convert Fahrenheit to Celcius
+    {
+        return (temp - 32)*(5/9)
+    }
+    function K2M (dist)         //Convert Kilometres/hour to Miles/hour
+    {
+        return (dist * 0.6213711922)
+    }
+    function M2K (dist)         //Convert Miles/hour to Kilometres/hour
+    {
+        return (dist * 1.609344)
+    }
 })
 
+module.exports = C2F
+module.exports = F2C
+module.exports = K2M
+module.exports = M2K
