@@ -201,7 +201,7 @@ convert.addEventListener("click", ()=> {
     }
     function F2C (temp)         //Convert Fahrenheit to Celcius
     {
-        return (input - 32)*(5/9)
+        return (temp - 32)*(5/9)
     }
     function K2M (dist)         //Convert Kilometres/hour to Miles/hour
     {
