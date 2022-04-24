@@ -1,15 +1,20 @@
 //Grabbing length by class and by id
 let lbutton = document.querySelector('.length')
 let length = document.querySelector('#length')
+let pi = document.querySelector('#empty')
+
 
 //Don't display the new divs in the regular calclator
 lbutton.classList.add('show')
+
 
 //Grab the = that evaluates differently for each calc mode
 let convert = document.querySelector('.convert')
 
 //Grab the C to I button that will display smth unqiue for each calc mode
 let changed = document.querySelector('.unitC')
+
+
 //Style the text red
 changed.style.color = "red"
 
@@ -91,7 +96,10 @@ length.addEventListener("click", () => {
     lbutton.classList.remove("show")
     button.style.display = "none"
     changed.innerText = "Cm to In"
+    
 })
+
+
 
 //When = to clicked evaluate 
 convert.addEventListener("click", ()=> {

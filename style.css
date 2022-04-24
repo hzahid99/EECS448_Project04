@@ -57,7 +57,7 @@
     transition: 0.15s;
 }
 
-#operators {
+#operators, #empty {
     /*Color of the tiles and the text for everything with operator id*/
     background-color: #8D99AE;
     color: black;
