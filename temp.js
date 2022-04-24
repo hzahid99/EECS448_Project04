@@ -8,5 +8,12 @@ temp.addEventListener("click", ()=> {
     changed.innerText = "C° to F°"
     pi.innerText = ""
     multiply.style.display = "none"
+
+    angle.style.fontWeight = "normal"
+    length.style.fontWeight = "normal"
+    speed.style.fontWeight = "normal"
+    base.style.fontWeight = "normal"
+    temp.style.fontWeight = "bold"
+    home.style.fontWeight = "normal"
 })
 

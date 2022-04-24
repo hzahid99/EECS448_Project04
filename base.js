@@ -8,6 +8,13 @@ base.addEventListener("click", ()=> {
     changed.innerText = "Bin/Dec"
     pi.innerText = ""
     multiply.style.display = "none"
+
+    angle.style.fontWeight = "normal"
+    length.style.fontWeight = "normal"
+    speed.style.fontWeight = "normal"
+    base.style.fontWeight = "bold"
+    temp.style.fontWeight = "normal"
+    home.style.fontWeight = "normal"
     
 })
 

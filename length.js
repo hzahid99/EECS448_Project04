@@ -99,6 +99,13 @@ length.addEventListener("click", () => {
     changed.innerText = "Cm to In"
     multiply.style.display = "none"
     pi.innerText = ""
+
+    angle.style.fontWeight = "normal"
+    length.style.fontWeight = "bold"
+    speed.style.fontWeight = "normal"
+    base.style.fontWeight = "normal"
+    temp.style.fontWeight = "normal"
+    home.style.fontWeight = "normal"
     
 })
 

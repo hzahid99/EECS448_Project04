@@ -16,6 +16,13 @@ let home = document.querySelector('#home')
 home.addEventListener("click", ()=> {
     lbutton.classList.add("show")
     button.style.display = ""
+
+    angle.style.fontWeight = "normal"
+    length.style.fontWeight = "normal"
+    speed.style.fontWeight = "normal"
+    base.style.fontWeight = "normal"
+    temp.style.fontWeight = "normal"
+    home.style.fontWeight = "bold"
 })
 
 let dneed = document.querySelector('.l')

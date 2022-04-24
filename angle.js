@@ -8,5 +8,12 @@ angle.addEventListener("click", ()=> {
     changed.innerText = "Deg/Rad"
     pi.innerText = "π"
     multiply.style.display = "block"
+
+    angle.style.fontWeight = "bold"
+    length.style.fontWeight = "normal"
+    speed.style.fontWeight = "normal"
+    base.style.fontWeight = "normal"
+    temp.style.fontWeight = "normal"
+    home.style.fontWeight = "normal"
 })
 

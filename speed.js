@@ -8,5 +8,11 @@ speed.addEventListener("click", ()=> {
     pi.innerText = ""
     multiply.style.display = "none"
     
+    angle.style.fontWeight = "normal"
+    length.style.fontWeight = "normal"
+    speed.style.fontWeight = "bold"
+    base.style.fontWeight = "normal"
+    temp.style.fontWeight = "normal"
+    home.style.fontWeight = "normal"
 })
 
