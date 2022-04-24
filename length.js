@@ -94,6 +94,7 @@ changed.addEventListener("click", ()=> {
 
 //If switched to length tab undo the show function above that hid the buttons
 length.addEventListener("click", () => {
+    display.innerText = ""
     lbutton.classList.remove("show")
     button.style.display = "none"
     changed.innerText = "Cm to In"

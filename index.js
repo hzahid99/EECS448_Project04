@@ -14,6 +14,7 @@ let home = document.querySelector('#home')
 
 //If home is clicked invoke show which hides the buttons for other calc modes
 home.addEventListener("click", ()=> {
+    display.innerText = ""
     lbutton.classList.add("show")
     button.style.display = ""
 
