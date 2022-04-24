@@ -121,7 +121,7 @@ convert.addEventListener("click", ()=> {
     }
 
     //If the button has the temp text
-    if(changed.innerText == "C° to F°" || changed.innerText == "F to C"){
+    if(changed.innerText == "C° to F°" || changed.innerText == "F° to C°"){
         //Calc for C to F
         if(changed.innerText == "C° to F°") {
             let input = display.innerText
@@ -130,7 +130,7 @@ convert.addEventListener("click", ()=> {
         } else                          //Calc for F to C
         {
             let input = display.innerText
-            let ans = (input - 32)*5/9
+            let ans = ((input - 32)*5)/9
             display.innerText = ans
         }
 
