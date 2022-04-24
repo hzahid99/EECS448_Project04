@@ -156,6 +156,7 @@ convert.addEventListener("click", ()=> {
         //Calc for bin to dec
         if(changed.innerText == "Bin/Dec") 
         {
+            let input = display.innerText
             try                         //Try to the convert binary to decimal
             {                                                       
                 let ans = parseInt(input, 2)
@@ -165,7 +166,6 @@ convert.addEventListener("click", ()=> {
             {                                                   
                 display.innerText = "Error"
             }
-            let input = display.innerText
         }    
         else                    //Calc for dec to bin
         {                        
