@@ -68,6 +68,7 @@ changed.addEventListener("click", ()=> {
     //Alternate bw Deg/Radand Rad/Deg
     else if(initial == "Deg/Rad" || initial == "Rad/Deg")
     {
+        
         basebut++
         if(basebut % 2 == 1)
         {
@@ -96,6 +97,8 @@ length.addEventListener("click", () => {
     lbutton.classList.remove("show")
     button.style.display = "none"
     changed.innerText = "Cm to In"
+    multiply.style.display = "none"
+    pi.innerText = ""
     
 })
 
@@ -103,6 +106,12 @@ length.addEventListener("click", () => {
 
 //When = to clicked evaluate 
 convert.addEventListener("click", ()=> {
+    if(display.innerText.includes("π")){
+        let input = display.innerText
+        let i = input.indexOf("π")
+        input = input.substring(0,i)+"3.14159265358979323846"+input.substring(i+1)
+        display.innerText = input
+    }
 
     //If the button has the temp text
     if(changed.innerText == "C° to F°" || changed.innerText == "F to C"){
@@ -156,10 +165,12 @@ convert.addEventListener("click", ()=> {
         //Calc for deg to rad
         if(changed.innerText == "Deg/Rad") {
             let input = display.innerText
+            input = eval(input)
             let ans = input * (Math.PI/180)
             display.innerText = ans
         } else {                        //Calc for rad to deg
             let input = display.innerText
+            input = eval(input)
             let ans = input * (180/Math.PI)
             display.innerText = ans
         }

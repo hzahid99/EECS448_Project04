@@ -7,6 +7,8 @@ let button = document.querySelector('.buttons')
 let change = document.querySelector('.change')
 change.style.color = "red"
 
+let multiply = document.querySelector(".angle")
+
 //Grab the home button
 let home = document.querySelector('#home')
 
@@ -36,16 +38,17 @@ buttons.map(button => {
         if (event.target.innerText == 'C') {                            //If the key C is clicked 
             display.innerText = '';                                     //Reset the calculator and clear out the display by using an empty string
         }
-
-
-
+        else if(event.target.innerText == "π"){
+            display.innerText += "π"
+        }
         else if (event.target.innerText == '←') {                       //If backspace is clicked
             if (display.innerText) {                                    //Check if the display has text in it
                 display.innerText = display.innerText.slice(0, -1);     //If it does, remove the last charachter of the string
             }
         }
 
-        else if (event.target.innerText == '=') {    
+        else if (event.target.innerText == '=') { 
+           
             //If user wants to use trig functions
             if(display.innerText.slice(0,3) == 'sin' || display.innerText.slice(0,3) == 'cos' || display.innerText.slice(0,3) == 'tan') {
                 //get the nunber after sin/cos/tan

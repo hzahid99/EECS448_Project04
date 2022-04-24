@@ -6,6 +6,8 @@ base.addEventListener("click", ()=> {
     lbutton.classList.remove("show")
     button.style.display = "none"
     changed.innerText = "Bin/Dec"
+    pi.innerText = ""
+    multiply.style.display = "none"
     
 })
 

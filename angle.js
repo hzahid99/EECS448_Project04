@@ -6,6 +6,7 @@ angle.addEventListener("click", ()=> {
     lbutton.classList.remove("show")
     button.style.display = "none"
     changed.innerText = "Deg/Rad"
-    pi.innerText = "pi"
+    pi.innerText = "π"
+    multiply.style.display = "block"
 })
 
