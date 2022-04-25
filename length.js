@@ -73,10 +73,12 @@ changed.addEventListener("click", ()=> {
         if(basebut % 2 == 1)
         {
             changed.innerText = "Deg/Rad"
+            pi.innerText=""
         }
         else
         {
             changed.innerText = "Rad/Deg"
+            pi.innerText = "π"
         }
     }
 
@@ -174,11 +176,13 @@ convert.addEventListener("click", ()=> {
             input = eval(input)
             let ans = input * (Math.PI/180)
             display.innerText = ans
+            
         } else {                        //Calc for rad to deg
             let input = display.innerText
             input = eval(input)
             let ans = input * (180/Math.PI)
             display.innerText = ans
+            
         }
     }
 
