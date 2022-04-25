@@ -73,11 +73,13 @@ changed.addEventListener("click", ()=> {
         if(basebut % 2 == 1)
         {
             changed.innerText = "Deg/Rad"
+            //Dont display pi in deg to rad
             pi.innerText=""
         }
         else
         {
             changed.innerText = "Rad/Deg"
+            //Display pi in rad to deg
             pi.innerText = "π"
         }
     }
@@ -94,15 +96,17 @@ changed.addEventListener("click", ()=> {
     }    
 })
 
-//If switched to length tab undo the show function above that hid the buttons
+//If switched to length tab undo the show function above that hide the buttons
 length.addEventListener("click", () => {
+    //Clear the display when this tab clicked
     display.innerText = ""
     lbutton.classList.remove("show")
     button.style.display = "none"
+    //bottom left button displays this
     changed.innerText = "Cm to In"
     multiply.style.display = "none"
-    pi.innerText = ""
 
+    //the length tab in bold to indicate the current tab
     angle.style.fontWeight = "normal"
     length.style.fontWeight = "bold"
     speed.style.fontWeight = "normal"
@@ -114,6 +118,7 @@ length.addEventListener("click", () => {
 
 //When = to clicked evaluate 
 convert.addEventListener("click", ()=> {
+    //If user selects pi
     if(display.innerText.includes("π")){
         let input = display.innerText
         let i = input.indexOf("π")

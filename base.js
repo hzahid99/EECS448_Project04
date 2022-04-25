@@ -9,6 +9,7 @@ base.addEventListener("click", ()=> {
     pi.innerText = ""
     multiply.style.display = "none"
 
+    //Base tab in bold to indicate the current tab
     angle.style.fontWeight = "normal"
     length.style.fontWeight = "normal"
     speed.style.fontWeight = "normal"

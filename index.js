@@ -14,10 +14,12 @@ let home = document.querySelector('#home')
 
 //If home is clicked invoke show which hides the buttons for other calc modes
 home.addEventListener("click", ()=> {
+    //Clear the display when this tab clicked
     display.innerText = ""
     lbutton.classList.add("show")
     button.style.display = ""
 
+    //Home tab in bold to indicate the current tab
     angle.style.fontWeight = "normal"
     length.style.fontWeight = "normal"
     speed.style.fontWeight = "normal"
